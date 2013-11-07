@@ -43,7 +43,7 @@
 				<p class="intro">To get started, login using Facebook</p></div>
 			</div>
 			<div class="login">
-                <a onclick="promptLogin()" class="login-button"> 
+                <a onclick="alert("before the promptLogin() call"); promptLogin()" class="login-button"> 
                   <span>Login</span>
                 </a>
             </div>
@@ -168,7 +168,7 @@
             console.log('here')
               FB.init({
                   //appId: '273476932664248',436820716429579
-                  ppId: '436820716429579',
+                  appId: '436820716429579',
                   nativeInterface: CDV.FB,
                   status     : true, // check login status
                   //cookie     : true, // enable cookies to allow the server to access the session
