@@ -186,7 +186,6 @@ function handleStatusChange(response) {
 }
 
 function promptLogin() {
-	alert("in promptLogin()")
   FB.login(null, {scope: 'email'});
 }
 
