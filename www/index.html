@@ -10,10 +10,6 @@
   <meta property="og:image" content="images/scrumptious_logo_large.png" />
   <meta property="og:site_name" content="Scrumptious" />
   <meta property="og:description" content="Scrumptious app" />
-  <!-- 436820716429579
-  <meta property="fb:app_id" content="273476932664248" />
-  -->
-  
   <meta property="fb:app_id" content="436820716429579" />
 
   <title>Scrumptious</title>
@@ -24,7 +20,7 @@
   <script src="js/mustache.js"></script>
   <script src="js/main.js"></script>
   <!-- cordova -->
-  <script type="text/javascript" src="phonegap.js"></script>
+  <script type="text/javascript" src="cordova.js"></script>
   <!-- cordova facebook plugin -->
   <script type="text/javascript" src="cdv-plugin-fb-connect.js"></script>
   <!-- facebook js sdk -->
@@ -47,7 +43,7 @@
 				<p class="intro">To get started, login using Facebook</p></div>
 			</div>
 			<div class="login">
-                <a onclick="alert("before the promptLogin() call"); promptLogin()" class="login-button"> 
+                <a onclick="promptLogin()" class="login-button"> 
                   <span>Login</span>
                 </a>
             </div>
@@ -168,10 +164,8 @@
     <script type="text/javascript">
          document.addEventListener('deviceready', function() {
             // window.fbAsyncInit = function() {
-            
             console.log('here')
               FB.init({
-                  //appId: '273476932664248',436820716429579
                   appId: '436820716429579',
                   nativeInterface: CDV.FB,
                   status     : true, // check login status
@@ -179,7 +173,6 @@
                  // xfbml: true,
                   useCachedDialogs: false
               });
-              
               FB.Event.subscribe('auth.statusChange', handleStatusChange);
               FB.getLoginStatus(handleStatusChange);
           });
