@@ -383,3 +383,4 @@ function displayFriends(friends) {
 	var output = Mustache.to_html(tmpl, friends);
 	$("#friends-list").html(output).listview('refresh');
 }
+ 
